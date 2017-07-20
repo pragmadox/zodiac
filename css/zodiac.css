@@ -49,7 +49,7 @@ footer {
 	border: 5px solid grey;
 	border-radius: 25px;
 	float: right;
-	font-size: 3rem;
+	font-size: 2rem;
 	text-align: center;
 }
 
@@ -107,11 +107,11 @@ footer {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 4rem;
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 button {

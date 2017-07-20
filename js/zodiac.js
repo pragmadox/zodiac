@@ -101,8 +101,8 @@ function swapPicOrQuiz() {
 				this.style.display = "none"; //Don't show the thumb anymore
 				var index = stringArray.indexOf(this.id); //Figure out which element.
 				stringArray.splice(index, 1); //Drop that element from the array.
-				feedback.innerHTML = this.id + " - " + this.pin + "<br>Great Job. <br> There are " + stringArray.length + " animals left."; //Give feedback
-				feedback.innerHTML += "<br> Your score so far is: " + avgScore + "%";
+				feedback.innerHTML = "<br>" + this.id + " - " + this.pin + "<br>Great Job. <br> There are " + stringArray.length + " animals left."; //Give feedback
+				feedback.innerHTML += "<br> Your score so far is: " + avgScore + "%<br>	Clicks: " + clicks;
 				playRandom();
 			} else {
 					clicks++;
@@ -115,11 +115,11 @@ function swapPicOrQuiz() {
 					var delay = setTimeout(toggleMode, 1000);
 			}
 		}	else if (randomID !== this.id) {
-				feedback.innerHTML = "Sorry, That's Incorrect";
+				feedback.innerHTML = "<br> Sorry, That's Incorrect";
 				clicks++;
 				avgScore = ((rawScore/clicks)*100).toFixed(1);
 			
-				feedback.innerHTML += "<br> Your score has dropped to: " + avgScore + "%";
+				feedback.innerHTML += "<br> Your score has dropped to: " + avgScore + "%<br>Clicks: " + clicks;
 		}
 	} else if (mode === "teach") {
 			//Play the sound
